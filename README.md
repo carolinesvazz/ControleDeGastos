@@ -224,4 +224,4 @@ Além dos requisitos propostos no desafio, foram implementados:
 
 ---
 
-Desenvolvido por **Caroline Silva**.
+Desenvolvido por **Caroline Vaz**.
