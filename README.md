@@ -212,7 +212,7 @@ Frontend
 
 # ✨ Diferenciais
 
-Além dos requisitos propostos no desafio, foram implementados:
+Além dos requisitos propostos, foram implementados:
 
 - Autenticação utilizando JWT;
 - Dashboard com indicadores financeiros;
