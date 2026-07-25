@@ -9,6 +9,7 @@ A aplicação permite cadastrar pessoas, registrar receitas e despesas, visualiz
 ## 📸 Demonstração BackEnd
 
 <img width="616" height="796" alt="image" src="https://github.com/user-attachments/assets/800f7669-994d-456d-85aa-db7a590dcdf4" />
+
 ### Login
 
 <img width="1391" height="511" alt="image" src="https://github.com/user-attachments/assets/565e2b99-966a-4308-9b36-b97c5a9a85f3" />
