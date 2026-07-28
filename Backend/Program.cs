@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using ControleGastos.API.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -105,6 +106,30 @@ builder.Services.AddCors(options =>
 });
 
 var app = builder.Build();
+
+// ===============================
+// Criação automática do usuário administrador
+// ===============================
+
+using (var scope = app.Services.CreateScope())
+{
+    var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+
+    context.Database.EnsureCreated();
+
+    if (!context.Usuarios.Any())
+    {
+        context.Usuarios.Add(new Usuario
+        {
+            Nome = "Administrador",
+            Email = "admin@email.com",
+            SenhaHash = "123456",
+            Perfil = "Administrador"
+        });
+
+        context.SaveChanges();
+    }
+}
 
 // ===============================
 // Pipeline HTTP
