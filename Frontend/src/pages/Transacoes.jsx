@@ -33,10 +33,11 @@ export default function Transacoes() {
         setPessoas(listaPessoas);
     }
 
+    // Cadastra uma nova transação
     async function salvar(e) {
-        e.preventDefault();
+    e.preventDefault();
 
-        // Cadastra uma nova transação
+    try {
         await criarTransacao({
             descricao,
             valor: Number(valor),
@@ -50,7 +51,12 @@ export default function Transacoes() {
         setPessoaId("");
 
         carregarDados();
+
+        alert("Transação cadastrada com sucesso!");
+    } catch (erro) {
+        alert(erro);
     }
+}
 
     async function remover(id) {
 

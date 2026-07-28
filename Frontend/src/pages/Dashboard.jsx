@@ -14,12 +14,12 @@ export default function Dashboard() {
         saldo: 0
     });
 
-
+  // Carrega o resumo ao abrir a página
     useEffect(() => {
         carregarResumo();
     }, []);
 
-
+// Busca os dados do Dashboard na API
     async function carregarResumo() {
 
         try {

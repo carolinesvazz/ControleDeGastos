@@ -9,6 +9,8 @@ using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Configuração da conexão com o banco de dados SQLite.
+
 // ===============================
 // Banco de Dados
 // ===============================
@@ -73,6 +75,7 @@ builder.Services.AddSwaggerGen(options =>
         Scheme = "bearer",
         BearerFormat = "JWT"
     });
+    
 
     options.AddSecurityRequirement(new OpenApiSecurityRequirement
     {

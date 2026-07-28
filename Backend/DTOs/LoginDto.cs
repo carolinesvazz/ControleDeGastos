@@ -1,5 +1,7 @@
 namespace ControleGastos.API.DTOs;
 
+// DTO utilizado para receber os dados de autenticação do usuário.
+
 public class LoginDto
 {
     public string Email { get; set; } = string.Empty;

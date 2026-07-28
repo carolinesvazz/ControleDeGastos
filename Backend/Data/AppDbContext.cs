@@ -4,10 +4,9 @@ using ControleGastos.API.Models;
 
 namespace ControleGastos.API.Data;
 
-/// <-------->
 /// Contexto do banco de dados.
 /// Responsável por mapear as entidades para tabelas do SQLite.
-/// </------->
+
 public class AppDbContext : DbContext
 {
     // Construtor que recebe as configurações do banco.

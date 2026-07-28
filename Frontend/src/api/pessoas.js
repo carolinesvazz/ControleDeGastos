@@ -1,5 +1,7 @@
 import api from "./api";
 
+// Realiza as operações de cadastro de pessoas na API.
+
 export const listarPessoas = async () => {
     const response = await api.get("/Pessoa");
     return response.data;

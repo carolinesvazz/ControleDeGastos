@@ -5,6 +5,7 @@ import api from "../api/api";
 export default function Login() {
 
     const navigate = useNavigate();
+     // Estados responsáveis por armazenar os dados do formulário
     const [email, setEmail] = useState("");
     const [senha, setSenha] = useState("");
 

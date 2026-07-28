@@ -8,8 +8,12 @@ export const listarTransacoes = async () => {
 };
 
 export const criarTransacao = async (transacao) => {
-    const response = await api.post("/Transacao", transacao);
-    return response.data;
+    try {
+        const response = await api.post("/Transacao", transacao);
+        return response.data;
+    } catch (error) {
+        throw error.response?.data || error;
+    }
 };
 
 export const excluirTransacao = async (id) => {
